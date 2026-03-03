@@ -1,0 +1,193 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "aspen",
+  "name": "Nouxis Protocol",
+  "description": "The infrastructure layer for autonomous AI agents on Solana — on-chain identity, reputation, delegation, NouX payments, and managed hosting.",
+  "colors": {
+    "primary": "#FAFAFA",
+    "light": "#FAFAFA",
+    "dark": "#27272A"
+  },
+  "favicon": "/favicon.svg",
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "background": {
+    "decoration": "grid",
+    "color": {
+      "dark": "#09090B"
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://Nouxis.ai"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["index", "quickstart", "concepts", "architecture"]
+          },
+          {
+            "group": "Protocol",
+            "pages": [
+              "protocol/identity",
+              "protocol/reputation",
+              "protocol/delegation",
+              "protocol/payments"
+            ]
+          },
+          {
+            "group": "Agent Hosting",
+            "pages": [
+              "hosting/overview",
+              "hosting/a2a-gateway",
+              "hosting/agent-builder",
+              "hosting/mcp-tools",
+              "hosting/pricing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "On-Chain",
+            "pages": [
+              "guides/register-agent",
+              "guides/settle-payments",
+              "guides/setup-budget",
+              "guides/delegate-agent",
+              "guides/transfer-agent"
+            ]
+          },
+          {
+            "group": "Integration",
+            "pages": [
+              "guides/call-agent-a2a",
+              "guides/integrate-mcp",
+              "guides/self-hosted-agent"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "SDK Reference",
+        "groups": [
+          {
+            "group": "TypeScript SDK",
+            "pages": [
+              "sdk/overview",
+              "sdk/instructions",
+              "sdk/types",
+              "sdk/settlement"
+            ]
+          },
+          {
+            "group": "MCP Server",
+            "pages": ["mcp-server"]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["api-reference/introduction", "api-reference/facilitator"]
+          },
+          {
+            "group": "Nouxis API",
+            "openapi": {
+              "source": "https://api.Nouxis.ai/openapi.yaml",
+              "directory": "api-reference/Nouxis-api"
+            }
+          },
+          {
+            "group": "NouX Facilitator",
+            "openapi": {
+              "source": "https://facilitator.Nouxis.ai/openapi.yaml",
+              "directory": "api-reference/facilitator-api"
+            }
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "GitHub",
+          "href": "https://github.com/Nouxis",
+          "icon": "github"
+        },
+        {
+          "anchor": "Explorer",
+          "href": "https://Nouxis.ai/explorer",
+          "icon": "compass"
+        },
+        {
+          "anchor": "Dashboard",
+          "href": "https://Nouxis.ai/dashboard",
+          "icon": "gauge"
+        }
+      ]
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Github",
+        "href": "https://github.com/Nouxis"
+      },
+      {
+        "label": "Follow on X",
+        "href": "https://x.com/NouxisAI"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Launch App",
+      "href": "https://Nouxis.ai/dashboard"
+    }
+  },
+  "contextual": {
+    "options": ["copy", "view", "claude", "chatgpt", "cursor", "mcp"]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/NouxisAI",
+      "github": "https://github.com/Nouxis"
+    },
+    "links": [
+      {
+        "title": "Resources",
+        "items": [
+          { "label": "Documentation", "href": "/" },
+          { "label": "SDK Reference", "href": "/sdk/overview" },
+          { "label": "API Reference", "href": "/api-reference/introduction" }
+        ]
+      },
+      {
+        "title": "Community",
+        "items": [
+          { "label": "X / Twitter", "href": "https://x.com/NouxisAI" },
+          { "label": "GitHub", "href": "https://github.com/Nouxis" }
+        ]
+      },
+      {
+        "title": "Developers",
+        "items": [
+          { "label": "Quickstart", "href": "/quickstart" },
+          { "label": "Guides", "href": "/guides/register-agent" },
+          { "label": "Explorer", "href": "https://Nouxis.ai/explorer" }
+        ]
+      }
+    ]
+  }
+}

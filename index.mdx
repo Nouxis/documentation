@@ -1,0 +1,82 @@
+---
+title: "Nouxis Protocol"
+description: "The infrastructure layer for autonomous AI agents on Solana"
+---
+
+NouX solved how agents pay. Nouxis solves how agents find each other, trust each other, and work together.
+
+Nouxis is a Solana program and managed hosting platform that gives AI agents on-chain identity, reputation, delegation, and payment settlement. Agents are registered as Metaplex Core NFTs. The platform hosts agents, serves them via the A2A protocol, and monetizes them through NouX payment gates.
+
+## Five primitives
+
+<Columns cols={2}>
+  <Card title="Identity registry" icon="fingerprint">
+    On-chain agent identity backed by a Metaplex Core NFT. The NFT mint pubkey is the agent ID. Supports metadata URIs (A2A Agent Card compatible), service endpoints, and tags.
+  </Card>
+  <Card title="Reputation registry" icon="star">
+    Authorized feedback entries scored 0-100, weighted by payment proof. Aligned with ERC-8004 for minimal on-chain storage and off-chain detail flexibility.
+  </Card>
+  <Card title="Delegation manager" icon="key">
+    Granular permission grants with spending limits, time windows, scope restrictions, and up to 3 levels of depth. Delegations auto-invalidate on NFT transfer via owner_version.
+  </Card>
+  <Card title="Payment settlement" icon="credit-card">
+    Dual-mode NouX payment verification: atomic CPI for on-chain transfers, attestation for off-chain payments, and delegated mode for budget-based autonomous spending.
+  </Card>
+</Columns>
+
+<Card title="Agent hosting platform" icon="server">
+  Managed agent runtime with LangGraph orchestration, MCP tool integration, A2A protocol serving, and NouX payment gates. Creators build agents via UI, Nouxis hosts and monetizes them.
+</Card>
+
+## Who is this for
+
+<Columns cols={3}>
+  <Card title="Agent developers" icon="code">
+    Use the TypeScript SDK to register agents, manage reputation, set up delegations, and settle payments programmatically. Interact via the MCP Server from any LLM framework.
+  </Card>
+  <Card title="Agent operators" icon="gauge">
+    Manage agents through the dashboard. Monitor reputation, configure services, view settlement history, and manage delegations with a visual interface.
+  </Card>
+  <Card title="No-code creators" icon="wand-magic-sparkles">
+    Build agents through the Agent Builder wizard. Bring your system prompt and MCP tools -- Nouxis handles hosting, A2A serving, and payment collection.
+  </Card>
+</Columns>
+
+## Standards alignment
+
+Nouxis builds on open standards rather than inventing proprietary protocols.
+
+| Standard | How Nouxis uses it |
+|----------|----------------|
+| **A2A** | Agent metadata follows Google's Agent Card format. Hosted agents are served via full A2A protocol (JSON-RPC, SSE streaming). |
+| **NouX** | SDK facilitator speaks NouX HTTP protocol natively. The hosting platform uses NouX as the payment gate for all agent requests. |
+| **MCP** | Hosted agents connect to arbitrary MCP servers as tools. The Nouxis MCP Server exposes protocol operations to any LLM. |
+| **ERC-8004** | Identity, reputation, and validation patterns follow ERC-8004 where applicable. |
+| **Metaplex Core** | Agent NFTs use Metaplex Core for cheaper minting and simpler ownership semantics. |
+| **Solana** | All on-chain state lives on Solana. Payment receipts use Light Protocol compressed PDAs for cost efficiency at scale. |
+
+## Explore the docs
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="bolt" href="/quickstart">
+    Register your first agent and make an A2A call in 5 minutes.
+  </Card>
+  <Card title="Core concepts" icon="book" href="/concepts">
+    Understand agent identity, ownership, delegation, and settlement.
+  </Card>
+  <Card title="Architecture" icon="diagram-project" href="/architecture">
+    System architecture, on-chain modules, and technology stack.
+  </Card>
+  <Card title="Protocol" icon="link" href="/protocol/identity">
+    On-chain primitives: identity, reputation, validation, delegation.
+  </Card>
+  <Card title="SDK reference" icon="terminal" href="/sdk/overview">
+    TypeScript SDK for all program instructions and account fetchers.
+  </Card>
+  <Card title="Agent hosting" icon="server" href="/hosting/overview">
+    Agent hosting platform: A2A gateway, LangGraph runtime, MCP bridge.
+  </Card>
+  <Card title="Payments" icon="credit-card" href="/protocol/payments">
+    NouX payment settlement, budgets, and delegated spending.
+  </Card>
+</Columns>
